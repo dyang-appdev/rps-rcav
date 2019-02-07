@@ -11,7 +11,7 @@ class GameController < ApplicationController
         @image = "far fa-hand-paper fa-10x"
     else 
         @outcome = "won"
-        @image = "far fa-hand-scisssors fa-10x"
+        @image = "far fa-hand-scissors fa-10x"
     end
 
     render("move_templates/play_rock.html.erb")
@@ -28,7 +28,7 @@ class GameController < ApplicationController
         @image = "far fa-hand-paper fa-10x"
     else 
         @outcome = "lost"
-        @image = "far fa-hand-scisssors fa-10x"
+        @image = "far fa-hand-scissors fa-10x"
     end
 
     render("move_templates/play_paper.html.erb")
@@ -45,10 +45,14 @@ class GameController < ApplicationController
         @image = "far fa-hand-paper fa-10x"
     else 
         @outcome = "tied"
-        @image = "far fa-hand-scisssors fa-10x"
+        @image = "far fa-hand-scissors fa-10x"
     end
 
     render("move_templates/play_scissors.html.erb")
   end
        
+  def index
+      render("move_templates/index.html")
+      
+  end
 end
